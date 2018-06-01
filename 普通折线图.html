@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container{
+            width:80%;
+            margin: 0 auto;
+            height:500px;
+        }
+    </style>
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/macarons.js"></script>
+</head>
+<body>
+<div id="container">
+
+</div>
+<script type="text/javascript">
+    var myChart=echarts.init(document.getElementById("container"),"macarons");
+    var option={
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: 'line'
+        }]
+    };
+    myChart.setOption(option);
+</script>
+</body>
+</html>
